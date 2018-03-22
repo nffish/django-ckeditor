@@ -7,6 +7,8 @@ from django.views.decorators.cache import never_cache
 
 from . import views
 
+app_name = 'ckeditor_uploader'
+
 if django.VERSION >= (1, 8):
     urlpatterns = [
         url(r'^upload/', staff_member_required(views.upload), name='ckeditor_upload'),
